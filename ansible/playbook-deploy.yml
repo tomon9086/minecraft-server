@@ -1,0 +1,9 @@
+---
+- hosts: remote
+  tasks:
+    - name: install dependencies
+      become: yes
+      apt:
+        update_cache: yes
+        name:
+          - openjdk-8-jre-headless
